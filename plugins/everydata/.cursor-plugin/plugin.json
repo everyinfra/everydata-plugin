@@ -1,0 +1,26 @@
+{
+  "name": "everydata",
+  "version": "0.1.0",
+  "description": "EveryData structured public-data skill for Codex and Claude Code. Discover MCP capabilities, validate schemas and query supported records with explicit pagination limits.",
+  "author": {
+    "name": "EveryInfra",
+    "url": "https://everyinfra.com"
+  },
+  "homepage": "https://api.everyinfra.com/docs",
+  "repository": "https://github.com/everyinfra/everydata-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "everyinfra",
+    "agent-plugin",
+    "structured-data",
+    "public-data",
+    "data-extraction",
+    "mcp",
+    "api-discovery",
+    "codex",
+    "claude-code",
+    "agent-skills"
+  ],
+  "displayName": "EveryData",
+  "skills": "./skills/"
+}

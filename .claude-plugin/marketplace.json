@@ -1,0 +1,16 @@
+{
+  "name": "everydata-plugin",
+  "owner": {
+    "name": "EveryInfra",
+    "url": "https://everyinfra.com"
+  },
+  "plugins": [
+    {
+      "name": "everydata",
+      "source": "./plugins/everydata",
+      "description": "EveryData structured public-data skill for Codex and Claude Code. Discover MCP capabilities, validate schemas and query supported records with explicit pagination limits.",
+      "version": "0.1.0"
+    }
+  ],
+  "description": "EveryData structured public-data skill for Codex and Claude Code. Discover MCP capabilities, validate schemas and query supported records with explicit pagination limits."
+}

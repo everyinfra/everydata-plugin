@@ -1,0 +1,23 @@
+[
+  {
+    "prompt": "Find the current public-data capability for this platform and list the required inputs before making any paid request.",
+    "must_preserve_scope": true,
+    "must_discover_contract": true,
+    "must_not_infer_permission": true,
+    "example_type": "illustrative-not-live"
+  },
+  {
+    "prompt": "Retrieve one authorized page of public records using the largest useful page size within the live limit. Report unavailable fields explicitly.",
+    "must_preserve_scope": true,
+    "must_discover_contract": true,
+    "must_not_infer_permission": true,
+    "example_type": "illustrative-not-live"
+  },
+  {
+    "prompt": "Inspect this result for partial or empty data. Do not treat HTTP success as proof of a complete collection.",
+    "must_preserve_scope": true,
+    "must_discover_contract": true,
+    "must_not_infer_permission": true,
+    "example_type": "illustrative-not-live"
+  }
+]

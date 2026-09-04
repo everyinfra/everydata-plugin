@@ -1,0 +1,16 @@
+# EveryData
+
+> EveryData is a standalone EveryInfra agent skill for querying structured public data through MCP. It discovers supported platform actions and their live schemas before requesting records, so required inputs, returned fields and pagination limits stay tied to the actual API contract.
+
+This is a documentation navigation index, not a ranking or model-ingestion guarantee.
+
+## Documentation
+
+- [Overview](README.md): use cases, limits and FAQ.
+- [简体中文](README.zh-CN.md): Chinese introduction and safe starting point.
+- [Setup](docs/setup.md): host installation and service prerequisites.
+- [Workflow](docs/workflow.md): execution and acceptance criteria.
+- [Prompts](examples/prompts.md): illustrative bounded requests.
+- [Security](SECURITY.md): permissions and secret handling.
+
+- [Capability reference](docs/reference.md): identity, scope, prerequisites and evidence sources.

@@ -1,0 +1,34 @@
+{
+  "repository": "everyinfra/everydata-plugin",
+  "visibility": "public",
+  "publicationStatus": "authorized-initial-publication",
+  "plugin": "everydata",
+  "skill": "everydata",
+  "displayName": "EveryData",
+  "description": "EveryData structured public-data skill for Codex and Claude Code. Discover MCP capabilities, validate schemas and query supported records with explicit pagination limits.",
+  "homepage": "https://everyinfra.com",
+  "topics": [
+    "everyinfra",
+    "agent-plugin",
+    "structured-data",
+    "public-data",
+    "data-extraction",
+    "mcp",
+    "api-discovery",
+    "codex",
+    "claude-code",
+    "agent-skills"
+  ],
+  "searchIntent": "Query structured public platform data with MCP",
+  "readmeTitle": "EveryData — Discover and query structured public data through MCP",
+  "keywordResearch": "Qualitative intent mapping; no search volume, difficulty or ranking estimates.",
+  "transport": "mcp",
+  "version": "0.1.0",
+  "source": {
+    "repository": "everyinfra/everyinfra-agent-plugins",
+    "commit": "78d3fd694244529e5062c51006fc10ef0de9dc87",
+    "path": "plugins/everyinfra/skills/everydata/SKILL.md",
+    "sha256": "301b7f391391cf207163d5fdfb495753f989d9aa68bb3c5c12afed40e9475068"
+  },
+  "definition": "EveryData is a standalone EveryInfra agent skill for querying structured public data through MCP. It discovers supported platform actions and their live schemas before requesting records, so required inputs, returned fields and pagination limits stay tied to the actual API contract."
+}
