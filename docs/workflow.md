@@ -12,6 +12,19 @@ A schema-aware result containing the requested fields when available, plus a cle
 4. Use everyinfra_call_api for the authorized query, respecting its current pagination contract.
 5. Return the useful structured fields and disclose partial results, omitted fields and observed billing.
 
+## Post-collection cleanup handoff
+
+When the requested outcome continues from collection into model-assisted cleanup, keep the
+EveryData result bound to its server-issued source reference. Call MCP `tools/list`; if source-bound
+cleanup is absent, report it unavailable and do not fall back to general chat. If it is present,
+read the live schemas, inspect entitlement, discover the source version and inferred fields, list
+fixed recipes, and preview before any explicit activation or submission.
+
+After a refresh or unknown submit result, preserve the original idempotency key and use the live
+task list or original-task lookup. Then inspect task, unit and result state. Do not create a new task
+because lookup returns 404, and do not automatically choose partial export, cancellation or result
+deletion.
+
 ## Failure handling
 
 If discovery or catalog access fails, stop before a paid action. Read required fields from the current schema instead of copying a remembered payload. Report unavailable capabilities and denied account scopes as distinct conditions. Do not broaden keys, repeatedly retry a permanent error or substitute an unrelated mechanism without disclosure.

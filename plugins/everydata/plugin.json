@@ -1,7 +1,7 @@
 {
   "name": "everydata",
-  "version": "0.1.0",
-  "description": "EveryData structured public-data skill for Codex and Claude Code. Discover MCP capabilities, validate schemas and query supported records with explicit pagination limits.",
+  "version": "0.2.0",
+  "description": "EveryData skill for structured public-data collection and source-bound cleanup with live schemas, field discovery and task recovery.",
   "author": {
     "name": "EveryInfra",
     "url": "https://everyinfra.com"
@@ -15,6 +15,7 @@
     "structured-data",
     "public-data",
     "data-extraction",
+    "data-cleanup",
     "mcp",
     "api-discovery",
     "codex",

@@ -1,7 +1,7 @@
 {
   "name": "everydata",
-  "version": "0.1.0",
-  "description": "EveryData structured public-data skill for Codex and Claude Code. Discover MCP capabilities, validate schemas and query supported records with explicit pagination limits.",
+  "version": "0.2.0",
+  "description": "EveryData skill for structured public-data collection and source-bound cleanup with live schemas, field discovery and task recovery.",
   "author": {
     "name": "EveryInfra",
     "url": "https://everyinfra.com"
@@ -15,6 +15,7 @@
     "structured-data",
     "public-data",
     "data-extraction",
+    "data-cleanup",
     "mcp",
     "api-discovery",
     "codex",
@@ -24,8 +25,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "EveryData",
-    "shortDescription": "Discover and query structured public data through MCP",
-    "longDescription": "EveryData is a standalone EveryInfra agent skill for querying structured public data through MCP. It discovers supported platform actions and their live schemas before requesting records, so required inputs, returned fields and pagination limits stay tied to the actual API contract. Use it for a bounded lookup or collection where records matter more than a prose answer: an entity, a list of public records or a supported platform action. The live catalog determines what can be queried today.",
+    "shortDescription": "Collect structured public data and clean authorized results",
+    "longDescription": "EveryData discovers structured public-data actions, collects supported records, and hands authorized results to source-bound cleanup. It keeps live schemas, source versions, inferred fields, entitlement, task recovery and execution choices explicit.",
     "developerName": "EveryInfra",
     "category": "Engineering",
     "capabilities": [
@@ -43,7 +44,7 @@
     "defaultPrompt": [
       "Find the current public-data capability for this platform and list the required inputs before making any paid request.",
       "Retrieve one authorized page of public records using the largest useful page size within the live limit. Report unavailable fields explicitly.",
-      "Inspect this result for partial or empty data. Do not treat HTTP success as proof of a complete collection."
+      "For this authorized EveryData result, discover source-bound cleanup and show selectable fields before any submit."
     ]
   }
 }
