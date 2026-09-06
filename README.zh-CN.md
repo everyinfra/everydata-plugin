@@ -1,6 +1,9 @@
 # EveryData：结构化公开数据查询
 
-[English](README.md) · [安装配置](docs/setup.md) · [工作流程](docs/workflow.md) · [提示词示例](examples/prompts.md) · [能力与来源](docs/reference.md)
+[English](README.md) · [安装配置](docs/setup.md) · [工作流程](docs/workflow.md) · [清洗交接](docs/cleanup-handoff.zh-CN.md) · [提示词示例](examples/prompts.md) · [能力与来源](docs/reference.md)
+
+> **来源绑定清洗已上线：**生产继续提供现有EveryData采集工具，并已发现2个清洗工具、共15个
+> 操作。执行仍先读`tools/list`；账户资格与剩余额度只认实时权益响应。
 
 EveryData 面向需要结构化记录的任务。先读取真实的 platform/action 能力和字段，再按当前参数、分页与限额查询，避免凭旧文档猜接口。
 
@@ -43,3 +46,7 @@ python3 scripts/validate.py
 上述命令只做本地包结构、文档链接、元数据与示例校验，不产生付费调用。更具体的能力限制、错误处理和结果标准见[英文说明](README.md)与[工作流程](docs/workflow.md)。
 
 GitHub 源码公开不等于已在官方插件市场上架，也不代表 API 端到端测试已通过。维护者为 [EveryInfra](https://everyinfra.com)，许可证为 [Apache-2.0](LICENSE)。
+
+符合条件账户的站内采集结果清洗是有界附赠权益，不是无限免费Gemini或通用聊天余额。使用时仍需
+保留来源引用/version，先发现字段和固定配方并预览；刷新或未知回执要按原幂等键找回原任务。
+完整边界见[清洗交接](docs/cleanup-handoff.zh-CN.md)。
