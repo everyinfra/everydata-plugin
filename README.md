@@ -2,11 +2,13 @@
 
 ![EveryInfra H2 shared-base mark](plugins/everydata/assets/logo.svg)
 
-[简体中文](README.zh-CN.md) · [Setup](docs/setup.md) · [Workflow](docs/workflow.md) · [Cleanup handoff](docs/cleanup-handoff.md) · [Prompts](examples/prompts.md) · [Capability reference](docs/reference.md) · [API documentation](https://api.everyinfra.com/docs)
+[简体中文](README.zh-CN.md) · [Setup](docs/setup.md) · [Workflow](docs/workflow.md) · [Prompts](examples/prompts.md) · [Capability reference](docs/reference.md) · [API documentation](https://api.everyinfra.com/docs)
 
-> **Source-bound cleanup is live:** Production continues to expose the existing EveryData collection
-> tools and also advertises two cleanup tools with 15 operations. Call `tools/list` first; account
-> eligibility and remaining quota come only from the live entitlement response.
+> **Update (2026-10-09):** the two data cleanup tools have been retired. To clean, classify,
+> extract or summarize the data you collect, use the [AI API](https://everyinfra.com/en/products/ai):
+> OpenAI-compatible `POST /api/v1/chat/completions`, also available as the MCP tool
+> `everyinfra_chat`. It is free for accounts that have topped up, with per-minute limits that follow
+> cumulative top-ups.
 
 EveryData is a standalone EveryInfra agent skill for querying structured public data through MCP. It discovers supported platform actions and their live schemas before requesting records, so required inputs, returned fields and pagination limits stay tied to the actual API contract.
 
@@ -77,12 +79,12 @@ No. A field must be supported and returned by the current customer-facing contra
 
 Not necessarily. Pagination and limits are action-specific. State the collected scope and do not equate one page with a complete dataset.
 
-### Can qualifying accounts clean collected EveryData results without a customer charge?
+### How do I clean or label the records I collect?
 
-Yes, when live discovery returns the source-bound cleanup tools and the account entitlement allows
-it. This is not unlimited free Gemini or a general-chat credit. Callers must preserve the EveryData
-source reference, inspect live entitlement and schemas, discover fields and preview a fixed recipe.
-See the [cleanup handoff](docs/cleanup-handoff.md).
+Pass them to the [AI API](https://everyinfra.com/en/products/ai) (MCP tool `everyinfra_chat`, or
+OpenAI-compatible REST). It is free for accounts that have topped up, with per-minute limits that
+follow cumulative top-ups; describe the output format in the prompt and validate the result before
+using it.
 
 ## Validate and contribute
 

@@ -11,34 +11,18 @@ Use the MCP tools `everyinfra_list_capabilities` and `everyinfra_call_api`.
 2. Select the exact `platform` and `action` from the returned catalog. Read required parameters,
    optional parameters, `max_limit` and current price. Use availability only when the catalog
    actually returns it; catalog membership alone is not proof that live inventory exists.
-3. Put only catalog-declared parameters under `params`. Do not pass upstream or provider-specific
-   fields, and do not guess an action name.
+3. Put only catalog-declared parameters under `params`. Do not add other fields, and do not guess
+   an action name.
 4. Call `everyinfra_call_api`. Request the largest useful result within `max_limit` when that avoids
    needless repeated charges.
 5. Treat empty, partial and failed results according to the response fields. Report the returned
    `billing` block rather than estimating cost from a stale document.
 
-EveryData returns a normalized and redacted customer contract. Do not promise raw provider output,
-provider identity, private data, or fields not present in the live capability catalog.
+EveryData returns a normalized and redacted customer contract. Do not promise raw internal output,
+internal identifiers, private data, or fields not present in the live capability catalog.
 
-## Source-bound cleanup handoff
-
-If the user asks to normalize, translate, summarize, classify or extract fields from an EveryData
-result after collection, do not detach the response and send it through general chat to imitate an
-included benefit. Call MCP `tools/list` first. Only when the live server advertises source-bound
-cleanup may you inspect its current schemas and continue with the server-issued source reference.
-
-The live cleanup contract contains 15 operations across separate read and action tools. The
-read path includes entitlement, source/version, inferred field and recipe discovery, preview, task
-listing, original-task lookup, task/unit/result reads and export. The action path contains explicit
-activation, idempotent submission, cancellation and result deletion. Confirm the tools and actions
-through live discovery before use.
-
-Preserve the source reference/version and original submit idempotency key. After interruption,
-list tasks or find the original task with that same key before any new submit; a 404 is not proof
-that the previous request was never accepted. Field discovery returns paths and types without
-sample values and does not replace recipe preview. The server's entitlement response decides
-whether the qualifying-account cleanup benefit is active and free of customer charge.
+To clean, label or summarize collected records, use EveryAI (`everyinfra_chat`), which is free for
+accounts that have topped up. The former data cleanup tools were retired on 2026-10-09.
 
 ## Standalone package
 

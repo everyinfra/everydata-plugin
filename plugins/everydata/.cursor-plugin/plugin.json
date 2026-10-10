@@ -1,7 +1,7 @@
 {
   "name": "everydata",
-  "version": "0.2.0",
-  "description": "EveryData skill for structured public-data collection and source-bound cleanup with live schemas, field discovery and task recovery.",
+  "version": "0.3.0",
+  "description": "EveryData skill for structured public-data collection with live schemas, required-input checks and pagination limits.",
   "author": {
     "name": "EveryInfra",
     "url": "https://everyinfra.com"
@@ -15,7 +15,6 @@
     "structured-data",
     "public-data",
     "data-extraction",
-    "data-cleanup",
     "mcp",
     "api-discovery",
     "codex",

@@ -1,7 +1,7 @@
 {
   "name": "everydata",
-  "version": "0.2.0",
-  "description": "EveryData skill for structured public-data collection and source-bound cleanup with live schemas, field discovery and task recovery.",
+  "version": "0.3.0",
+  "description": "EveryData skill for structured public-data collection with live schemas, required-input checks and pagination limits.",
   "author": {
     "name": "EveryInfra",
     "url": "https://everyinfra.com"
@@ -15,7 +15,6 @@
     "structured-data",
     "public-data",
     "data-extraction",
-    "data-cleanup",
     "mcp",
     "api-discovery",
     "codex",
@@ -25,8 +24,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "EveryData",
-    "shortDescription": "Collect structured public data and clean authorized results",
-    "longDescription": "EveryData discovers structured public-data actions, collects supported records, and hands authorized results to source-bound cleanup. It keeps live schemas, source versions, inferred fields, entitlement, task recovery and execution choices explicit.",
+    "shortDescription": "Collect structured public data with live schemas",
+    "longDescription": "EveryData discovers structured public-data actions and collects supported records. It keeps live schemas, required inputs, pagination limits and billing evidence explicit.",
     "developerName": "EveryInfra",
     "category": "Engineering",
     "capabilities": [
@@ -44,7 +43,7 @@
     "defaultPrompt": [
       "Find the current public-data capability for this platform and list the required inputs before making any paid request.",
       "Retrieve one authorized page of public records using the largest useful page size within the live limit. Report unavailable fields explicitly.",
-      "For this authorized EveryData result, discover source-bound cleanup and show selectable fields before any submit."
+      "Inspect this result for partial or empty data. Do not treat HTTP success as proof of a complete collection."
     ]
   }
 }
