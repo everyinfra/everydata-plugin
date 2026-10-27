@@ -1,5 +1,8 @@
 # EveryData — Discover and query structured public data through MCP
 
+<!-- rq223-banner -->
+<p align="center"><img alt="EveryData — Discover and query structured public data through MCP" src="assets/banner-en.jpg" width="100%"></p>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">

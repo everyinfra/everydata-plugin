@@ -1,5 +1,8 @@
 # EveryData：结构化公开数据查询
 
+<!-- rq223-banner -->
+<p align="center"><img alt="EveryData：通过 MCP 查询结构化公开数据" src="assets/banner-zh.jpg" width="100%"></p>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
